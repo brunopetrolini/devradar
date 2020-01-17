@@ -1,5 +1,5 @@
-const Dev = require('../models/Dev');
-const parseStringAsArray = require('../utils/parseStringAsArray');
+const Dev = require("../models/Dev");
+const parseStringAsArray = require("../utils/parseStringAsArray");
 
 module.exports = {
   async index(request, response) {
@@ -14,7 +14,7 @@ module.exports = {
       location: {
         $near: {
           $geometry: {
-            type: 'Point',
+            type: "Point",
             coordinates: [longitude, latitude]
           },
           $maxdistance: 10000
